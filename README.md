@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Private Next.js Dashboard – Lernprojekt
+
+Dieses Repository ist ein **privates Lern- und Experimentierprojekt** zur Entwicklung eines modernen Dashboards mit **Next.js (App Router)**.
+
+Der Fokus liegt auf:
+
+* sauberer Projektstruktur
+* modernen UI-/UX-Konzepten (Dark Mode, Clean Design)
+* Best Practices in React & Next.js
+* schrittweiser Erweiterung (Auth, Layouts, State, Datenanbindung)
+
+> ⚠️ **Hinweis:** Dieses Projekt ist **nicht für den produktiven Einsatz** gedacht. Es dient ausschließlich dem persönlichen Lernen und Ausprobieren.
+
+---
+
+## Tech Stack
+
+* **Next.js** (App Router)
+* **React**
+* **TypeScript**
+* **CSS / Tailwind CSS** (geplant)
+* **Dark Mode** (System / Toggle)
+
+---
+
+## Projektziele
+
+* Aufbau eines skalierbaren Dashboard-Layouts
+* Entwicklung eines Login-Screens (UI-first)
+* Verständnis für Routing, Layouts & Server Components
+* Integration typischer Dashboard-Bausteine:
+
+  * Sidebar / Navigation
+  * Header
+  * Karten & Tabellen
+  * Dummy-Daten & später APIs
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Development Server starten
 
 ```bash
 npm run dev
-# or
+# oder
 yarn dev
-# or
+# oder
 pnpm dev
-# or
+# oder
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Anschließend im Browser öffnen:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Projektstruktur (Auszug)
 
-To learn more about Next.js, take a look at the following resources:
+```txt
+app/
+ ├─ page.tsx        # Einstiegspunkt (Dashboard / Landing)
+ ├─ layout.tsx      # Globales Layout
+ ├─ globals.css     # Globale Styles
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Die Seite aktualisiert sich automatisch bei Änderungen.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Schriftarten
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Dieses Projekt nutzt **next/font** zur automatischen Optimierung und Einbindung der Schriftart **Geist**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Lernressourcen
+
+* Next.js Dokumentation: [https://nextjs.org/docs](https://nextjs.org/docs)
+* App Router Guide: [https://nextjs.org/docs/app](https://nextjs.org/docs/app)
+* React Docs: [https://react.dev](https://react.dev)
+
+---
+
+## Deployment
+
+Ein Deployment ist **optional** und dient nur Testzwecken.
+
+Empfohlen:
+
+* **Vercel** (einfachste Option für Next.js)
+
+---
+
+## Lizenz
+
+Privates Projekt – keine öffentliche Lizenz.
+
+---
+
+✍️ *Dieses README wird im Laufe des Projekts erweitert, sobald neue Features oder Konzepte hinzukommen.*
