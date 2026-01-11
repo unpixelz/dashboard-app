@@ -10,6 +10,12 @@ import {
   FieldSeparator,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { use } from "react";
+import { userInfo } from "os";
+import { userAgent } from "next/server";
+
+
+const username = "Tim";
 
 export function LoginForm({
   className,
@@ -28,7 +34,7 @@ export function LoginForm({
                 <Hexagon className="size-30" />
               </div>
             </a>
-            <h1 className="text-xl font-bold">Willkommen zurück, Tim</h1>
+            <h1 className="text-xl font-bold">Willkommen zurück, {username}</h1>
           </div>
           <div className="grid place-items-center">
             <Field>
@@ -49,7 +55,7 @@ export function LoginForm({
             </Field>
           </div>
           <Field>
-            <Button type="submit">Login</Button>
+            <Button className="transition active:scale-95 hover:bg-zinc-350" type="submit">Login</Button>
           </Field>
         </FieldGroup>
       </form>
