@@ -12,7 +12,7 @@ export default function LoginPage() {
 
   return (
     <div className="bg-black flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
-      <div className="absolute inset-0 z-0 blur-xl">
+      <div className="absolute inset-0 z-0 blur-xl animate rotate-infinite-slow">
         <Spline
           scene="https://prod.spline.design/MzN0bZlpOtOYb7eo/scene.splinecode"
           className="w-full h-full"
@@ -20,10 +20,10 @@ export default function LoginPage() {
       </div>
       <div className="z-10 w-full max-w-sm animate-out fade-out delay-1000">
         {errorMessage && (
-          <Alert variant="destructive" className="mb-4">
+          <Alert variant="destructive" className='bg-destructive dark:bg-destructive/20 border-2 text-white'>
             <Terminal />
             <AlertTitle>Login Error</AlertTitle>
-            <AlertDescription>{errorMessage}</AlertDescription>
+            <AlertDescription className='text-white/80'>{errorMessage}</AlertDescription>
           </Alert>
         )}
       </div>

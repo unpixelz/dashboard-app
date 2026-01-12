@@ -123,3 +123,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .green-faded {
+    display: inline-block;
+    background: linear-gradient(
+      90deg,
+      rgba(94, 152, 191, 1) 0%,
+      rgba(87, 199, 133, 1) 54%,
+      rgba(227, 236, 0, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+
