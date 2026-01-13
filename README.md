@@ -9,7 +9,7 @@ Der Fokus liegt auf:
 * Best Practices in React & Next.js
 * schrittweiser Erweiterung (Auth, Layouts, State, Datenanbindung)
 
-> ⚠️ **Hinweis:** Dieses Projekt ist **nicht für den produktiven Einsatz** gedacht. Es dient ausschließlich dem persönlichen Lernen und Ausprobieren.
+> **Hinweis:** Dieses Projekt ist **nicht für den produktiven Einsatz** gedacht. Es dient ausschließlich dem persönlichen Lernen und Ausprobieren.
 
 ---
 
@@ -102,4 +102,4 @@ Privates Projekt – keine öffentliche Lizenz.
 
 ---
 
-✍️ *Dieses README wird im Laufe des Projekts erweitert, sobald neue Features oder Konzepte hinzukommen.*
+*Dieses README wird im Laufe des Projekts erweitert, sobald neue Features oder Konzepte hinzukommen.*
