@@ -1,7 +1,7 @@
 "use client";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { ChartNoAxesCombined, Terminal } from "lucide-react";
+import { ChartNoAxesCombined } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,7 +12,7 @@ import {
   FieldSeparator,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { createClient } from "@/lib/supabase";
+import { createClient} from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -43,7 +43,7 @@ export function LoginForm({
     });
 
     if (error) {
-      setErrorMessage?.(error.message);
+      setErrorMessage?.(error.name + ": " + error.message);
     } else {
       router.push("/dashboard");
     }
