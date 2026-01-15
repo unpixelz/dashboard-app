@@ -25,9 +25,8 @@ export default function SpotlightCard() {
         } as React.CSSProperties
       }
     >
-      {/* Gradient blur effects */}
       <div
-        className="absolute w-80 h-80 -left-40 -top-40 bg-slate-400 rounded-full opacity-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-100 z-10 blur-[100px]"
+        className="absolute w-80 h-80 -left-40 -top-40 bg-neutral-400 rounded-full opacity-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-100 z-10 blur-[100px]"
         style={{
           transform: `translate(var(--mouse-x), var(--mouse-y))`,
         }}
@@ -40,8 +39,7 @@ export default function SpotlightCard() {
       />
 
       {/* Card content */}
-      <div className="relative h-full bg-slate-900 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
-        {/* Radial gradient at bottom */}
+      <div className="relative h-full bg-neutral-900 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
         <div
           className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
           aria-hidden="true"
@@ -52,11 +50,11 @@ export default function SpotlightCard() {
         <div className="flex flex-col h-full items-center text-center">
           {/* Button */}
           <a
-            className="inline-flex justify-center items-center whitespace-nowrap rounded-lg bg-slate-800 hover:bg-slate-900 border border-slate-700 px-3 py-1.5 text-sm font-medium text-slate-300 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150 cursor-pointer"
+            className="inline-flex justify-center items-center absolute whitespace-nowrap rounded-lg bg-neutral-800 hover:bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-sm font-medium text-slate-300 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150 cursor-pointer"
             href="#"
           >
             <svg
-              className="fill-slate-500 mr-2"
+              className="fill-neutral-500 mr-2"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="14"

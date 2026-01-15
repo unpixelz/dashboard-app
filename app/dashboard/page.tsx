@@ -23,14 +23,14 @@ export default function DashboardPage() {
       {/* Header*/}
       <nav className="fixed left- w-full z-50 bg-white shadow-md">
         <header className="p-2 bg-zinc-main border-b shadow-lg w-full">
-          <div className="flex items-center justify-between px-4">
+          <div className="flex items-center justify-between px-2">
             <div className="flex items-center gap-4">
               <BarChart3 className="text-emerald-500" size={20} />
               <h1 className="text-sm font-medium text-white">
                 myTradingJourney
               </h1>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 pr-0">
               <form
                 onSubmit={() => {
                   router.push("/login");
