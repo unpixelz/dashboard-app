@@ -157,9 +157,9 @@ export function ChartAreaInteractive() {
     <Card className="pt-0 bg-zinc-card rounded-3xl">
       <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
         <div className="grid flex-1 gap-1">
-          <CardTitle>Area Chart - Interactive</CardTitle>
+          <CardTitle>Trading History</CardTitle>
           <CardDescription>
-            Showing total visitors for the last 3 months
+            Account Balance 
           </CardDescription>
         </div>
         <Select value={timeRange} onValueChange={setTimeRange}>
