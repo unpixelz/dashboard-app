@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Libertinus_Keyboard } from "next/font/google";
+import { Inter, Geist, Geist_Mono, Libertinus_Keyboard } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { Toaster } from "@/components/ui/sonner";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,9 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark bg-zinc-main">
+      <Toaster position="top-center" />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>

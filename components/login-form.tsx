@@ -1,6 +1,5 @@
 "use client";
 
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ChartNoAxesCombined } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -12,13 +11,13 @@ import {
   FieldSeparator,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { createClient} from "@/lib/supabase";
+import { createClient } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export function LoginForm({
   className,
-  setErrorMessage, // destructured, wird NICHT in ...props landen
+  setErrorMessage,
   ...props
 }: React.ComponentProps<"div"> & {
   setErrorMessage?: (msg: string | null) => void;
@@ -26,7 +25,6 @@ export function LoginForm({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  //const [error, setError] = useState<string | null>(null);
 
   const supabase = createClient();
   const router = useRouter();
@@ -57,7 +55,7 @@ export function LoginForm({
         "flex flex-col gap-6 animate-in fade-in duration-1000 delay-500",
         className
       )}
-      {...props} // nur restliche HTML-Props
+      {...props}
     >
       <form onSubmit={handleLogin}>
         <FieldGroup>

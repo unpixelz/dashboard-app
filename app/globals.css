@@ -121,6 +121,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-inter), sans-serif;
   }
 }
 
@@ -137,6 +138,44 @@
     background-clip: text;
     color: transparent;
   }
+
+  .bg-zinc-main {
+    background-color: #171717;
+  }
+
+  .bg-zinc-card {
+    background-color: #2b2b2b;
+  }
+
+  .bg-light-card {
+    background-color: #e6f1fd;
+  }
+
+  .bg-superlight-card {
+    background-color: #edeefc;
+  }
 }
 
+@layer components {
+  .gradient-border-circle {
+    @apply relative rounded-full leading-none;
 
+    /* Komplexe Werte, die Tailwind nicht nativ hat */
+    border: var(--borderWidth-thin) solid transparent;
+    padding: var(--base-size-12);
+    transform-style: preserve-3d;
+
+    background: linear-gradient(var(--bgColor-default), var(--bgColor-default))
+        padding-box,
+      conic-gradient(
+          from 135deg at center,
+          #0dff50 0deg,
+          #096bde 80deg,
+          #8e47fe 100deg,
+          #bea0ff 250deg,
+          #096bde 270deg,
+          #0dff50
+        )
+        border-box;
+  }
+}
