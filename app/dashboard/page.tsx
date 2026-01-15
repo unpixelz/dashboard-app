@@ -53,9 +53,35 @@ export default function DashboardPage() {
       {/* Main Content mit Sidebars */}
       <div className="flex flex-1 pt-14 w-full">
         {/* Linke Sidebar */}
+        <aside
+          id="default-sidebar"
+          className="top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0"
+          aria-label="Sidebar"
+        >
+          <div className="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
+            <ul className="space-y-2 font-medium">
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
+                >
+                  <svg
+                    className="w-5 h-5 transition duration-75 group-hover:text-fg-brand"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                  </svg>
+                  <span className="ms-3">Dashboard</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
 
-
-    
         {/* Hauptinhalt */}
         <div className="flex-1 min-h-screen border-r border-l border-zinc-700">
           <h1 className="text-2xl font-medium p-4 text-white">Overview</h1>
@@ -74,7 +100,9 @@ export default function DashboardPage() {
                   <CardTitle className="text-black flex">
                     {item.title}
                   </CardTitle>
-                  <p className="text-black text-4xl mt-2 font-bold">{item.value}</p>
+                  <p className="text-black text-4xl mt-2 font-bold">
+                    {item.value}
+                  </p>
                 </CardHeader>
               </Card>
             ))}
