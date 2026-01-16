@@ -90,25 +90,25 @@ export default function PortfolioPage() {
 
       {/* Content Bereich */}
       <section className="flex justify-center px-4 py-24">
-  <div className="w-full max-w-6xl">
-    <h1 className="mb-6 text-4xl md:text-6xl font-bold tracking-tight text-left">
-      Tim Sokolovski,<br />
-      Full-Stack Developer
-    </h1>
+        <div className="w-full max-w-6xl">
+          <h1 className="mb-6 text-4xl md:text-6xl font-bold tracking-tight text-left">
+            Tim Sokolovski,
+            <br />
+            Full-Stack Developer
+          </h1>
 
-    <p className="my-30 max-w-2xl text-base md:text-xl text-slate-400 text-center mx-auto">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    </p>
+          <p className="my-30 max-w-2xl text-base md:text-xl text-slate-400 text-center mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
 
-    <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-right">
-      TestRight
-    </h1>
-  </div>
-</section>
-
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-right">
+            TestRight
+          </h1>
+        </div>
+      </section>
     </main>
   );
 }

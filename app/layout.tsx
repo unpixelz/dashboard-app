@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Geist, Geist_Mono, Libertinus_Keyboard } from "next/font/google";
+import {
+  Inter,
+  Geist,
+  Geist_Mono,
+  Libertinus_Keyboard,
+} from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { Toaster } from "@/components/ui/sonner";
@@ -31,10 +36,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark bg-zinc-main">
-      <Toaster position="top-center" />
-      <body
-        className={`${inter.variable} ${inter.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${inter.variable} antialiased`}>
+        <Toaster position="top-center" />
         {children}
       </body>
     </html>

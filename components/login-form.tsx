@@ -29,13 +29,15 @@ export function LoginForm({
   const supabase = createClient();
   const router = useRouter();
 
+  
+
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
 
     setLoading(true);
     setErrorMessage?.(null);
 
-    const { data, error } = await supabase.auth.signInWithPassword({
+    const { error } = await supabase.auth.signInWithPassword({
       email: email,
       password: password,
     });
@@ -48,6 +50,7 @@ export function LoginForm({
 
     setLoading(false);
   }
+
 
   return (
     <div
