@@ -43,7 +43,7 @@ export default function DashboardPage() {
   return (
     <div className="bg-zinc-main min-h-screen flex flex-col">
       {/* Header*/}
-      <nav className="fixed left-0 w-full z-50 bg-white shadow-md">
+      <nav className="top-0 fixed left-0 w-full z-50 bg-white shadow-md">
         <header className="p-2 bg-zinc-main border-b shadow-lg w-full">
           <div className="flex items-center justify-between px-2">
             <div className="flex items-center gap-4">
@@ -57,14 +57,18 @@ export default function DashboardPage() {
             </div>
             <div className="flex items-center">
               {/* Buttons rechts */}
-              <Button variant="outline" className="text-white mr-2" size="icon">
+              <Button
+                variant="outline"
+                className="text-white mr-2"
+                size="icon-sm"
+              >
                 <Bolt size={14} />
               </Button>
               <Tooltip>
                 <TooltipTrigger>
                   <Button
                     className="bg-red-900 hover:bg-red-950 border-red-600 border text-white"
-                    size="icon"
+                    size="icon-sm"
                     onClick={handleLogout}
                   >
                     <LogOut size={14} />
@@ -79,14 +83,14 @@ export default function DashboardPage() {
         </header>
       </nav>
 
-      <div className="flex flex-1 pt-14 w-full">
+      <div className="flex h-screen pt-12 w-full">
         {/* Linke Sidebar */}
-        <1aside
+        <aside
           id="default-sidebar"
-          className="top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0"
+          className="fixed left-0 top-14 z-40 w-64 h-[calc(100vh-3.5rem)] transition-transform -translate-x-full sm:translate-x-0 bg-neutral-primary-soft border-default"
           aria-label="Sidebar"
         >
-          <div className="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
+          <div className="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-default">
             <ul className="space-y-2 font-medium">
               <li>
                 <a
@@ -109,7 +113,9 @@ export default function DashboardPage() {
           </div>
         </aside>
         {/* Hauptinhalt */}
-        <DashboardView />
+        <main className="flex-1 ml-0 sm:ml-64 overflow-y-auto">
+          <DashboardView />
+        </main>
       </div>
     </div>
   );
