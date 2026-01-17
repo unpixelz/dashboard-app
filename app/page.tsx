@@ -1,6 +1,11 @@
+"use client"
+
 import Image from "next/image";
+import { useAuth } from "./hooks/useAuth";
 
 export default function Home() {
+
+  const { session, loading, logout, user } = useAuth();
   
   return (
     <div className="flex min-h-screen align-center items-center justify-center bg-zinc-50 font-sans dark:bg-black">
