@@ -1,5 +1,4 @@
 "use client"
-
 import {
   CircleCheckIcon,
   InfoIcon,
@@ -12,7 +11,7 @@ import { Toaster as Sonner, type ToasterProps } from "sonner"
 
 const Toaster = ({ ...props }: ToasterProps) => {
   const { theme = "system" } = useTheme()
-
+  
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
@@ -23,6 +22,18 @@ const Toaster = ({ ...props }: ToasterProps) => {
         warning: <TriangleAlertIcon className="size-4" />,
         error: <OctagonXIcon className="size-4" />,
         loading: <Loader2Icon className="size-4 animate-spin" />,
+      }}
+      toastOptions={{
+        style: {
+          background: "var(--toast-bg)",
+          color: "white",
+        },
+        classNames: {
+          success: "[--toast-bg:rgba(60,255,60,0.4)] [--toast-border:rgba(60,255,60,0.6)]",
+          info: "[--toast-bg:rgba(60,200,255,0.4)] [--toast-border:rgba(60,200,255,0.6)]",
+          error: "[--toast-bg:rgba(255,60,60,0.4)] [--toast-border:rgba(255,60,60,0.6)]",
+          warning: "[--toast-bg:rgba(255,60,60,0.4)] [--toast-border:rgba(255,60,60,0.6)]",
+        },
       }}
       style={
         {
