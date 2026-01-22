@@ -12,6 +12,23 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Badge } from "@/components/ui/badge"
+import { createClient } from "@/lib/supabase"
+import { refresh } from "next/cache"
+
+const supabase = createClient();
+
+async function deleteTrade(id: number): Promise<boolean> {
+
+  const { error } = await supabase.from("trades").delete().eq("id", id)
+
+  if(error) {
+    console.error("Fehler beim Löschen des Trades:", error);
+    return false;
+  }
+
+  refresh();
+  return true;
+}
 
 export type Trade = {
   id: number
@@ -175,7 +192,7 @@ export const columns: ColumnDef<Trade>[] = [
             <DropdownMenuSeparator />
             <DropdownMenuItem>Details anzeigen</DropdownMenuItem>
             <DropdownMenuItem>Bearbeiten</DropdownMenuItem>
-            <DropdownMenuItem className="text-red-600">
+            <DropdownMenuItem onClick={ () => deleteTrade(trade.id)} className="text-red-600">
               Löschen
             </DropdownMenuItem>
           </DropdownMenuContent>
