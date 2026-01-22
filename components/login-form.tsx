@@ -11,6 +11,7 @@ import {
   FieldSeparator,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 import { createClient } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -48,6 +49,7 @@ export function LoginForm({
       router.push("/dashboard");
     }
 
+    toast.info("Erfolgreich eingeloggt");
     setLoading(false);
   }
 
